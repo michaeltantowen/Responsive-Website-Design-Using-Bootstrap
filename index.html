@@ -37,11 +37,60 @@
             <a class="nav-item nav-link" href="template.html">Templates</a>
             <a class="nav-item nav-link" href="pricing.html">Pricing</a>
           </div>
-          <div class="btn btn-info ml-auto">Sign Up</div>
+          <div class="btn btn-info ml-auto" data-toggle="modal" data-target="#signupModal">Sign Up</div>
         </div>
       </div>
     </nav>
     <!-- End Navbar -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="signupModalLabel">Sign Up for WeBuild</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="registerEmailInput">Email address</label>
+                <input type="email" class="form-control" id="registerEmailInput" aria-describedby="emailHelp" required>
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="registerPasswordInput">Password</label>
+                <input type="password" class="form-control" id="registerPasswordInput" required>
+              </div>
+              <div class="form-group">
+                <label for="registerPasswordInput2">Confirm Password</label>
+                <input type="password" class="form-control" id="registerPasswordInput2" required>
+              </div>
+              <div class="form-group">
+                <label for="accountTypeSelection">Account Type</label>
+                <select class="form-control" id="accountTypeSelection">
+                  <option>Free</option>
+                  <option>Education</option>
+                  <option>Enterprise</option>
+                </select>
+                <small id="emailHelp" class="form-text text-muted">You can change this option later in profile setting.</small>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="getNewsCheckbox">
+                <label class="form-check-label" for="getNewsCheckbox">Send me mail about WeBuild news.</label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-info" onclick="createAcc()">Create Account</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal -->
 
     <!-- Jumbotron -->
     <div class="container mt-5">
@@ -236,6 +285,7 @@
     <!-- End Promotion -->
 
     <!-- Optional JavaScript -->
+    <script src="js/script.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/popper.min.js"></script>
